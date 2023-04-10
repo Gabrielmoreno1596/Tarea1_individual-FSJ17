@@ -1,0 +1,179 @@
+/* Importando una fuente */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+/* Selector para el receteo de la pagina */
+/* Con el selector universal */
+* {
+    /* Con este selector universal, solo podemos asignar 3 propiedades 
+    margin, padding */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* Validamos que las cajas hijas esten solo en el contenedor padre */
+}
+
+body{
+    /* tipo de fuentes */
+    font-family: 'Montserrat',sans-serif;
+    font-size: 17.6px;
+}
+
+header {
+    /* propiedad para colorar imagen de fondo */
+    margin-top: 0;
+    height: 200px;
+    color: rgb(16, 9, 9);
+    text-align: center;
+    line-height: 200px; /* propiedad que permite a que el texto se centre de forma verticla
+ */
+}
+
+#header{
+    background-image: url(../img/header-tierra.jpg);
+    background-position: 10% 50%;    
+    background-size: cover;
+}
+.box_header{
+    background-color:rgba(225, 205, 205, 0.397);
+}
+
+
+
+nav {
+    display: flex;
+    background-color: #2F7FC3;
+    
+}
+
+nav .menu{
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+}
+
+nav .menu li{
+    line-height: 40px;
+    float: left;
+}
+
+nav .menu a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;    
+}
+
+nav .menu .p_menu {
+    display: inline-block;
+    border-right: 1px solid rgb(182, 204, 219);
+    background-color: #2F7FC3;   
+}
+
+nav .menu .p_menu:hover{
+    background-color: #333;
+}
+
+
+/* MENU DESPLEGABLE */
+
+nav .menu .sub_menu ul {
+    display: none;
+    position: absolute;
+    background-color: #2F7FC3;
+    color: white;
+    text-align: left;
+    width: 350px;
+    box-shadow: 0px 2px 2px gray;
+    z-index: 1;   
+}
+
+nav .menu .sub_menu:hover ul{
+    display: block;
+}
+
+
+.box_center {
+    width: 80%;
+    margin: 0 auto; /* Retoma el margen automatico que provee el navegador */
+    padding: 25px;
+}
+
+h2 {
+    text-align: center;
+    /* 1rem = 16px */
+    font-size: 2rem;
+    color: #068E97;
+}
+
+.box_section{
+    display: flex; /* el Contenedor va hacer flexible */
+    justify-content: space-between;
+}
+
+.box_section .parrafo{
+    margin: 10px 0;
+}
+
+
+
+iframe {
+    display: flex;
+    margin: 0 auto;
+}
+
+
+
+footer {
+    background-color: #2f7fc3;
+}
+
+
+/* Diseñando el apartado de los iconos */
+.margen{
+    margin: 10px 0;
+}
+
+.menu_footer li{
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+    margin: 0px auto;
+    padding-right: 10px;
+}
+
+.box_footer{
+    width: 100%;
+}
+
+.iconos{
+    width: 100px;
+}
+
+
+
+.grid{
+    display: grid;
+    /* asignamos cuantas columnas queremos */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    padding: 10px 50px 20px 20px;
+    gap: 20px; /* Espacio entre columnas en el grid */
+    color: white;
+}
+
+.grid .box_footer h4{
+    text-align: right;
+}
+
+
+.menu_footer ul{
+    width: 100%;    
+    display: block;
+    text-align: center;
+   line-height: 70px;
+
+}
+
+.menu_footer ul li a svg{
+    background-color: #068E97;
+    color: white;
+    border-radius: 50%;
+}
