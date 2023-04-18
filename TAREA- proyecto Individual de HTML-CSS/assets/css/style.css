@@ -44,6 +44,20 @@ nav {
     
 }
 
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 40px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
 nav .menu{
     list-style: none;
     text-decoration: none;
@@ -68,13 +82,18 @@ nav .menu .p_menu {
 }
 
 nav .menu .p_menu:hover{
-    background-color: #333;
+    background-color: #333;    
+}
+
+nav .menu .p_menu a:hover{
+    color: rgb(197, 245, 226);
+    text-shadow: 1px 1px 1px black;
 }
 
 
 /* MENU DESPLEGABLE */
 
-nav .menu .sub_menu ul {
+nav .menu .sub_menu ul{
     display: none;
     position: absolute;
     background-color: #2F7FC3;
@@ -87,6 +106,11 @@ nav .menu .sub_menu ul {
 
 nav .menu .sub_menu:hover ul{
     display: block;
+}
+
+nav .menu .sub_menu:hover ul li a:hover{
+    color: rgb(197, 245, 226);
+    text-shadow: 0.5px 0.5px 2px black;
 }
 
 
@@ -144,17 +168,15 @@ footer {
 }
 
 .iconos{
-    width: 100px;
+    width: 100%;
 }
-
-
 
 .grid{
     display: grid;
     /* asignamos cuantas columnas queremos */
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    padding: 10px 50px 20px 20px;
+    padding: 10px 10px 10px 10px;
     gap: 20px; /* Espacio entre columnas en el grid */
     color: white;
 }
@@ -164,16 +186,75 @@ footer {
 }
 
 
-.menu_footer ul{
-    width: 100%;    
+.menu_footer ul, .menu_footer{
+    width: 100%;
     display: block;
-    text-align: center;
-   line-height: 70px;
+    text-align: right;
+    line-height: 50px;
 
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+.box_footer .menu_footer a:hover{
+    color: rgb(197, 245, 226);
+    text-shadow: 0.5px 0.5px 2px black;
+}
+
+
+.box_footer li{
+    border-right: 1px solid #000;
 }
 
 .menu_footer ul li a svg{
     background-color: #068E97;
     color: white;
     border-radius: 50%;
+}
+
+.menu_footer ul li a svg:hover{
+    background-color: #000;
+}
+
+footer em{
+    display: block;
+    text-align: center;
+    padding-bottom: 5px;
+
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px !important;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+        color: red;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
 }

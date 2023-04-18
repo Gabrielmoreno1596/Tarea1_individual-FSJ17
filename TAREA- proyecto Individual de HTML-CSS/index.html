@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="icon" type="image/jpg" href="../TAREA- proyecto Individual de HTML-CSS/assets/img/icon.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Inicio</title>
 
@@ -18,7 +21,12 @@
             <h1>Contaminación Ambiental</h1>
         </div>
     </header>
+
     <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
         <ul class="menu">
             <li class="p_menu"><a href="./index.html">INICIO</a></li>
             <li class="p_menu"><a href="./blog.html">BLOG</a></li>
@@ -29,7 +37,7 @@
                     <li><a href="./contaminacion-del-aire.html">CONTAMINACION DEL AIRE</a></li>
                 </ul>
             </li>
-            <li class="sub_menu p_menu"><a href="./consecuencias.html">CONSECUENCIAS</a>
+            <li class="sub_menu p_menu"><a href="#">CONSECUENCIAS</a>
                 <ul>
                     <li><a href="./calentamiento-global.html">CALENTAMIENTO GLOBAL</a></li>
                     <li><a href="./desarrollo-de-enfermedades.html">DESARROLLO DE ENFERMEDADES</a></li>
@@ -39,6 +47,7 @@
             <li class="p_menu"><a href="./imagenes.html">IMAGENES</a></li>
             <li class="p_menu"><a href="./contacto.html">CONTACTO</a></li>
         </ul>
+
     </nav>
     <main class="box_center">
         <section class="box_section">
@@ -167,15 +176,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="box_footer">
-                <h4>
-                    Todos los derechos reservados &copy; Gmoreno
-                </h4>
-            </div>
+
 
         </div>
-
-
+        <div class="box_footer">
+            <em>
+                Todos los derechos reservados &copy; Gmoreno
+            </em>
+        </div>
     </footer>
 </body>
 
